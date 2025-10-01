@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Smarto Agency&#160;&#8212; Збудовані обʼєкти</title>
+  <meta name="description"
+    content="Ознайомтесь з реалізованими житловими, громадськими та спортивними проектами SmartOrange. Якість понад усе." />
+  <meta name="keywords"
+    content="будівництво, проекти, житлові комплекси, SmartOrange, архітектура, реконструкція, стадіон, ІТ-школа" />
+  <meta name="author" content="SmartOrange" />
+
+  <!-- Open Graph -->
+  <!-- Open Graph для соцсетей -->
+  <meta property="og:title" content="Проекти SmartOrange" />
+  <meta property="og:description" content="Реалізовані проекти: житлові, громадські, спортивні. Дізнайтесь більше." />
+  <meta property="og:image" content="/images/og-projects.jpg" />
+  <meta property="og:url" content="https://smartorange.com/projects" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Проекти SmartOrange" />
+  <meta name="twitter:description" content="Ознайомтесь з реалізованими проектами SmartOrange." />
+  <meta name="twitter:image" content="/images/twitter-projects.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://smartorange.com/projects">
+
+  <!-- Favicons -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest"> -->
+  <!-- <meta name="theme-color" content="#000000"> -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+
+  <!-- Preload шрифта -->
+  <link rel="preload" href="./fonts/InterTight.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- Preconnect for performance -->
+
+  <!-- Structured Data -->
+
+</head>
+
+<body>
+
+  <main class="main">
+    <section class="projects">
+  <div class="swiper project__slider" id="project-slider" role="region" aria-label="Проекти компанії">
+    <a class="title logo" href="#">Logo company</a>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--bg1">
+        <div class="container">
+          <div class="swiper-slide__content">
+            <h2 class="title swiper-slide__title">Test slider</h2>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--bg2">
+        <div class="container">
+          <div class="swiper-slide__content">
+            <h2 class="swiper-slide__title">Owoooooo</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="swiper-button-prev" type="button" aria-label="Попередній слайд">
+      <svg class="icon icon--arrow-left">
+        <use href="#arrow-left"></use>
+      </svg>
+    </button>
+    <button class="swiper-button-next" type="button" aria-label="Наступний слайд">
+      <svg class="icon icon--arrow-right">
+        <use href="#arrow-right"></use>
+      </svg>
+    </button>
+    <div class="container">
+      <div class="decor">
+        <div class="decor__dots"></div>
+        <div class="decor__line"></div>
+        <div class="decor__clover"></div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="portfolio container">
+  <h2 class="portfolio__title">Збудовані обʼєкти</h2>
+
+  <div class="portfolio-sticky-wrapper">
+    <!-- Добавляем role="tablist" для списка вкладок для улучшения доступности -->
+    <ul class="portfolio-filter tabs" role="tablist">
+      <li class="portfolio-filter__item tabs__item">
+        <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
+             aria-selected будет управляться JavaScript'ом. -->
+        <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all"
+          aria-controls="panel-all" aria-selected="true">Усі</button>
+      </li>
+      <li class="portfolio-filter__item tabs__item">
+        <button class="portfolio-filter__btn tabs__btn" data-path="business" role="tab" id="tab-business"
+          aria-controls="panel-business" aria-selected="false">Бізнес</button>
+      </li>
+      <li class="portfolio-filter__item tabs__item">
+        <button class="portfolio-filter__btn tabs__btn" data-path="comfort" role="tab" id="tab-comfort"
+          aria-controls="panel-comfort" aria-selected="false">Комфорт</button>
+      </li>
+      <li class="portfolio-filter__item tabs__item">
+        <button class="portfolio-filter__btn tabs__btn" data-path="premium" role="tab" id="tab-premium"
+          aria-controls="panel-premium" aria-selected="false">Преміум</button>
+      </li>
+    </ul>
+  </div>
+  <!-- Этот ul будет содержать динамически генерируемые панели вкладок.
+       JavaScript должен будет добавлять role="tabpanel", id, aria-labelledby и hidden. -->
+  <ul class="portfolio-tabs-content tabs-content"></ul>
+
+  <button class="portfolio__btn-more">
+    Завантажити ще
+    <svg class="icon icon--arrow-down">
+      <use href="#arrow-down"></use>
+    </svg>
+  </button>
+</section>
+    <section class="contacts" aria-labelledby="contacts-title">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__list">
+        <div class="decor contacts__decor">
+          <div class="decor__dots"></div>
+          <div class="decor__line"></div>
+          <div class="decor__text">Smarto</div>
+        </div>
+        <h2 class="title contacts__title" id="contacts-title">Контакти</h2>
+
+        <address class="contacts__block">
+          <div class="contacts__row">
+            <div class="contacts__info">
+              <p class="contacts__descr">
+                Головний офіс:
+              </p>
+              <a class="contacts__link" href="mailto:SmartorangeTest@gmail.com"
+                rel="noopener noreferrer nofollow">SmartorangeTest@gmail.com</a>
+              <a class="contacts__map-button" href="https://maps.google.com" target="_blank"
+                rel="noopener noreferrer nofollow">
+                ВІДКРИТИ В&#160;GOOGLE MAPS
+              </a>
+            </div>
+
+            <div class="contacts__media">
+              <p class="contacts__descr">
+                Наші соцмережі:
+              </p>
+              <nav class="contacts__social" aria-label="Соціальні мережі">
+                <ul class="contacts__social-list">
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="Instagram">
+                      <svg class="icon icon--inst">
+                        <use href="#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="YouTube">
+                      <svg class="icon icon--you">
+                        <use href="#you"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="Facebook">
+                      <svg class="icon icon--fb">
+                        <use href="#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="TikTok">
+                      <svg class="icon icon--tik">
+                        <use href="#tik"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+          <div class="contacts__row">
+            <div class="contacts__info">
+              <p class="contacts__descr">
+                Телефони відділів:
+              </p>
+              <ul class="contact__phone">
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--phone" href="tel:+380444444444">
+                    <svg class="icon icon--phone">
+                      <use href="#phone"></use>
+                    </svg>
+                    (044) 444-44-44
+                  </a>
+                  <span class="contacts__link-info">(Юридичний відділ)</span>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link  contacts__link--phone" href="tel:+380525555555">
+                    <svg class="icon icon--phone">
+                      <use href="#phone"></use>
+                    </svg>(052) 555-55-55
+                  </a>
+                  <span class="contacts__link-info">(Бухгалтерія)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__email">
+              <p class="contacts__descr">
+                Email:
+              </p>
+              <a class="contacts__link" href="mailto:office@smarto.ua"
+                rel="noopener noreferrer nofollow">office@smarto.ua</a>
+            </div>
+          </div>
+        </address>
+      </div>
+      <div class="slogan">
+  <div class="title slogan__text slogan__text--top">Якість</div>
+  <div class="slogan__item slogan__item--top">
+    <picture>
+      <source type="image/avif" srcset="
+                      images/slogan/ellipse-1@1x.avif 1x,
+                      images/slogan/ellipse-1@2x.avif 2x">
+      <source type="image/webp" srcset="
+                      images/slogan/ellipse-1@1x.webp 1x,
+                      images/slogan/ellipse-1@2x.webp 2x">
+      <img class="slogan__image" src="./images/slogan/ellipse-1@1x.png" loading="lazy" decoding="async" alt="Top image">
+    </picture>
+  </div>
+
+  <div class="slogan__item slogan__item--bottom">
+    <picture>
+      <source type="image/avif" srcset="
+                      images/slogan/ellipse-2@1x.avif 1x,
+                      images/slogan/ellipse-2@2x.avif 2x">
+      <source type="image/webp" srcset="
+                      images/slogan/ellipse-2@1x.webp 1x,
+                      images/slogan/ellipse-2@2x.webp 2x">
+      <img class="slogan__image" src="./images/slogan/ellipse-2@1x.png" loading="lazy" decoding="async"
+        alt="Bottom image">
+    </picture>
+  </div>
+  <div class="title slogan__text slogan__text--bottom">понад усе</div>
+</div>
+    </div>
+  </div>
+  </div>
+</section>
+  </main>
+
+  <script src="./js/index.bundle.js"></script>
+
+  <!-- SVG спрайт -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- содержимое sprite.symbol.svg -->
+    <symbol id="inst" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M6.002 0c1.563 0 1.764.007 2.386.036.635.028 1.08.132 1.472.283.415.156.792.402 1.104.718l-.173.176.176-.173.114.118c.263.287.467.621.606.988.152.391.256.838.284 1.473.027.62.029.82.029 2.382 0 1.564-.007 1.764-.034 2.383-.028.635-.131 1.08-.283 1.473a3.191 3.191 0 0 1-1.826 1.826c-.391.152-.839.255-1.474.283-.62.027-.82.034-2.383.034-1.564 0-1.764-.007-2.383-.034-.635-.028-1.08-.131-1.473-.283a3.08 3.08 0 0 1-1.104-.72l.174-.174-.176.173.001.002a3.09 3.09 0 0 1-.722-1.108C.165 9.465.062 9.018.034 8.384.007 7.764 0 7.564 0 6c0-1.563.007-1.763.036-2.385.028-.635.131-1.08.283-1.472.137-.363.343-.698.604-.985l.114-.118.177.172-.174-.176a3.055 3.055 0 0 1 1.106-.72c.391-.152.838-.255 1.473-.283C4.24.007 4.44 0 6.002 0ZM6 3.158a2.843 2.843 0 1 0 .002 5.686A2.843 2.843 0 0 0 6 3.158Zm3.474-1.895a1.263 1.263 0 1 0 0 2.526 1.263 1.263 0 0 0 0-2.526Z" />
+
+    </symbol>
+    <symbol id="you" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M6.002.5c.024 0 2.42.016 4.006.13l.021.002.06.008c.263.03.81.09 1.293.6.418.432.519 1.283.53 1.38v.004c.004.04.088.987.088 1.938v.89c0 .951-.084 1.899-.088 1.939l-.002.011c-.012.094-.127.927-.524 1.355-.477.52-1.016.576-1.275.603a2.473 2.473 0 0 0-.067.008l-.021.002c-1.587.114-3.982.13-4.006.13H6.01c-.122-.002-2.994-.045-3.91-.13l-.028-.005c-.028-.005-.071-.009-.12-.014-.309-.035-.882-.1-1.336-.592C.201 8.326.1 7.492.09 7.396l-.001-.005C.084 7.35 0 6.403 0 5.452v-.89c0-.95.084-1.898.088-1.938l.002-.012c.012-.093.126-.926.524-1.354C1.098.73 1.64.668 1.9.638l.056-.006.022-.002C3.578.516 5.974.5 5.998.5h.004Zm-.88 2.706a.55.55 0 0 0-.508.008.458.458 0 0 0-.25.402v2.768c0 .166.093.317.25.402a.549.549 0 0 0 .505.01l2.792-1.371a.465.465 0 0 0 .27-.41.464.464 0 0 0-.266-.413L5.122 3.206Z" />
+    </symbol>
+    <symbol id="fb" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M13.905 7.992H15V6.085A14.144 14.144 0 0 0 13.404 6c-1.58 0-2.661.994-2.661 2.82v1.68H9v2.133h1.743V18h2.137v-5.367h1.672l.266-2.132h-1.939V9.03c0-.617.167-1.039 1.026-1.039Z" />
+    </symbol>
+    <symbol id="tik" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M15.755 8.566a2.608 2.608 0 0 1-.228-.137 3.231 3.231 0 0 1-.583-.516 2.913 2.913 0 0 1-.657-1.41h.002A1.807 1.807 0 0 1 14.263 6h-1.982v7.97c0 .106 0 .212-.004.316l-.002.04-.001.017v.005c-.02.285-.109.562-.257.804-.147.242-.35.443-.59.585-.25.147-.532.225-.82.224-.923 0-1.67-.783-1.67-1.75 0-.966.747-1.75 1.67-1.75.175 0 .35.03.515.085l.003-2.098a3.546 3.546 0 0 0-1.505.122c-.489.149-.942.401-1.332.741a4.018 4.018 0 0 0-.848 1.088c-.084.15-.4.753-.438 1.731-.024.555.137 1.13.213 1.368v.005c.048.14.234.618.538 1.02.245.324.534.608.858.843v-.005l.005.005c.96.678 2.023.633 2.023.633.184-.007.801 0 1.501-.345a3.798 3.798 0 0 0 1.22-.953c.282-.34.507-.729.664-1.148.18-.49.239-1.078.239-1.313v-4.228c.024.015.344.235.344.235s.462.308 1.181.508c.516.143 1.212.172 1.212.172V8.883c-.244.027-.739-.053-1.245-.316Z" />
+    </symbol>
+    <symbol id="phone" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M1.406 0A1.41 1.41 0 0 0 .073.957c-.062.184-.085.38-.067.575a13.886 13.886 0 0 0 2.161 6.09 13.714 13.714 0 0 0 4.224 4.215 13.949 13.949 0 0 0 6.074 2.158 1.413 1.413 0 0 0 1.417-.837c.078-.18.119-.373.118-.569v-2.107a1.405 1.405 0 0 0-1.211-1.427 9.057 9.057 0 0 1-1.979-.491 1.411 1.411 0 0 0-1.485.316l-.893.892a11.252 11.252 0 0 1-4.224-4.215l.895-.892a1.404 1.404 0 0 0 .316-1.483 9.006 9.006 0 0 1-.493-1.974A1.405 1.405 0 0 0 3.519 0H1.406Z" />
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_17_129)">
+        <path d="M-19.0005 11.9995L36.0006 11.9997M36.0006 11.9997L26.0129 21.9874M36.0006 11.9997L26.0129 2.01191"
+          stroke="currentColor" stroke-width="4" />
+      </g>
+      <defs>
+        <clipPath id="clip0_17_129">
+          <rect width="40" height="24" fill="currentColor" />
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol id="arrow-left" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_17_127)">
+        <path d="M59.0005 11.9995L3.99935 11.9997M3.99935 11.9997L13.9871 21.9874M3.99935 11.9997L13.9871 2.01191"
+          stroke="currentColor" stroke-width="4" />
+      </g>
+      <defs>
+        <clipPath id="clip0_17_127">
+          <rect width="40" height="24" fill="currentColor" transform="matrix(-1 0 0 1 40 0)" />
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol id="arrow-down" viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor"
+        d="M4 .25a.75.75 0 0 0-.75.75v8.095L1.549 7.266A.75.75 0 1 0 .45 8.29l3 3.222.549.59.549-.59 3-3.222A.75.75 0 0 0 6.45 7.266L4.75 9.095V1A.75.75 0 0 0 4 .25" />
+    </symbol>
+</body>
+
+</html>

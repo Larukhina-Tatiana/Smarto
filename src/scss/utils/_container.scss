@@ -1,0 +1,10 @@
+@use 'vars' as *;
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+  max-width: $container-width;
+  width: 100%;
+}

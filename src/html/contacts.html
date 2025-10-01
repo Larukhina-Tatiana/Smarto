@@ -1,0 +1,106 @@
+<section class="contacts" aria-labelledby="contacts-title">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__list">
+        <div class="decor contacts__decor">
+          <div class="decor__dots"></div>
+          <div class="decor__line"></div>
+          <div class="decor__text">Smarto</div>
+        </div>
+        <h2 class="title contacts__title" id="contacts-title">Контакти</h2>
+
+        <address class="contacts__block">
+          <div class="contacts__row">
+            <div class="contacts__info">
+              <p class="contacts__descr">
+                Головний офіс:
+              </p>
+              <a class="contacts__link" href="mailto:SmartorangeTest@gmail.com"
+                rel="noopener noreferrer nofollow">SmartorangeTest@gmail.com</a>
+              <a class="contacts__map-button" href="https://maps.google.com" target="_blank"
+                rel="noopener noreferrer nofollow">
+                ВІДКРИТИ В GOOGLE MAPS
+              </a>
+            </div>
+
+            <div class="contacts__media">
+              <p class="contacts__descr">
+                Наші соцмережі:
+              </p>
+              <nav class="contacts__social" aria-label="Соціальні мережі">
+                <ul class="contacts__social-list">
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="Instagram">
+                      <svg class="icon icon--inst">
+                        <use href="#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="YouTube">
+                      <svg class="icon icon--you">
+                        <use href="#you"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="Facebook">
+                      <svg class="icon icon--fb">
+                        <use href="#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="contacts__social-link" href="javascript:void(0);" aria-label="TikTok">
+                      <svg class="icon icon--tik">
+                        <use href="#tik"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+
+            </div>
+          </div>
+          <div class="contacts__row">
+            <div class="contacts__info">
+              <p class="contacts__descr">
+                Телефони відділів:
+              </p>
+              <ul class="contact__phone">
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--phone" href="tel:+380444444444">
+                    <svg class="icon icon--phone">
+                      <use href="#phone"></use>
+                    </svg>
+                    (044) 444-44-44
+                  </a>
+                  <span class="contacts__link-info">( Юридичний відділ )</span>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link  contacts__link--phone" href="tel:+380525555555">
+                    <svg class="icon icon--phone">
+                      <use href="#phone"></use>
+                    </svg>(052) 555-55-55
+                  </a>
+                  <span class="contacts__link-info">( Бухгалтерія )</span>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__email">
+              <p class="contacts__descr">
+                Email:
+              </p>
+              <a class="contacts__link" href="mailto:office@smarto.ua"
+                rel="noopener noreferrer nofollow">office@smarto.ua</a>
+            </div>
+          </div>
+        </address>
+      </div>
+      @include('blocks/slogan.html', {})
+    </div>
+  </div>
+  </div>
+</section>

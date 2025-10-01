@@ -1,0 +1,22 @@
+@use"./utils/modern-normalize.min";
+@use"./utils/fonts";
+@use"./utils/vars";
+@use"./utils/global";
+@use"./utils/mixins";
+@use"./utils/container";
+
+
+
+@use"./components/blocks/icons";
+@use"./components/slider";
+@use"./components/blocks/decor";
+@use"./components/contacts";
+@use"./components/slogan";
+@use"./components/blocks/titles";
+@use"./components/blocks/logo";
+@use"./components/portfolio";
+@use"./components/blocks/tabs";
+@use"./components/blocks/project";
+
+
+// @use"./components/**/*.scss";

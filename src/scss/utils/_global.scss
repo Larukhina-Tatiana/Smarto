@@ -1,0 +1,79 @@
+@use 'sass:math';
+@use 'vars' as *;
+@use 'mixins' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+    // font-size: inherit;
+}
+
+address {
+    font-style: normal;
+}
+
+body {
+    background-color: $white;
+    min-width: 100vw;
+    color: $black;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: -0.04em;
+    overflow-x: hidden;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}

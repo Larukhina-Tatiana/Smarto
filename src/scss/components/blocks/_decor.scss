@@ -1,0 +1,41 @@
+@use './utils/vars' as *;
+
+.decor {
+  position: relative;
+  padding-block: 2.5px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-39px);
+
+  &__dots {
+    flex-shrink: 0;
+    width: 41px;
+    height: 9px;
+    background: url('../images/icons/dots-decor.svg');
+  }
+
+  &__clover {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: url('../images/icons/clover.svg');
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: #0a0f13;
+    opacity: 0.2;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+}

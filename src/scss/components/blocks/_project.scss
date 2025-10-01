@@ -1,0 +1,93 @@
+@use './utils/vars' as *;
+@use './utils/mixins' as *;
+
+.project {
+  background-color: $white;
+  border-left: 1px solid $border;
+  border-right: 1px solid $border;
+  border-top: 1px solid $border;
+  padding: 20px 12px;
+  width: 442px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &__header {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+  }
+
+  &__year {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  &-labels {
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    border: 1px solid $border-tag;
+    border-radius: $border-radius;
+    padding: 4px 8px;
+
+    @include transition ($transition-property: (color, border-color));
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 12px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  &__address {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  &__details-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  &__tags {
+    color: $tags;
+    border: 1px solid $border-tag;
+    border-radius: $border-radius;
+    padding: 4px 8px;
+  }
+
+  @media screen and (width <=500px) {
+
+    width: 100%;
+
+  }
+
+}

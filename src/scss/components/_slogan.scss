@@ -1,0 +1,104 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.slogan {
+  position: relative;
+  width: 830px;
+  max-width: 100%;
+  height: 680px;
+  flex-shrink: 0;
+
+  &__item {
+    position: absolute;
+    top: 0;
+    width: 680px;
+    border-radius: 50%;
+    overflow: visible;
+    transition: all 2.5s cubic-bezier(0.68, -0.15, 0.27, 1.55);
+    will-change: transform, left, right, z-index; // Оптимизация анимации
+
+
+    &--top {
+      left: 0;
+      z-index: 2;
+      transform: scale(1.05); // лёгкий zoom
+    }
+
+    &--bottom {
+      right: 0;
+      z-index: 1;
+      transform: scale(0.95); // чуть меньше
+
+    }
+
+    &--active {
+      animation: slideIn 0.7s ease-in-out;
+    }
+
+    &--inactive {
+      animation: slideOut 0.7s ease-in-out;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__text {
+    position: absolute;
+    color: $white;
+    z-index: 3;
+    mix-blend-mode: exclusion;
+
+    &--top {
+      top: 7%;
+      left: 9%;
+      transform: translateX(-75px);
+    }
+
+    &--bottom {
+      bottom: 7%;
+      right: 18%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: clamp(20rem, 17.173rem + 14.14vw, 25.938rem);
+    height: clamp(15rem, 12.024rem + 14.88vw, 21.25rem);
+
+    &__item {
+      width: clamp(15rem, 12.024rem + 14.88vw, 21.25rem); // Уменьшаем ширину элементов
+      height: auto; // Высота по родительскому блоку
+    }
+
+    &__text--top {
+      transform: none;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9) translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: scale(0.95) translateX(20px);
+  }
+}

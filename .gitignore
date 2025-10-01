@@ -1,0 +1,8 @@
+node_modules
+libs
+src/fonts
+src/images
+src/data
+svgsprite
+.trae/
+gulp
