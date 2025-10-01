@@ -737,14 +737,14 @@ button {
   padding-top: clamp(1.25rem, 0.717rem + 2.67vw, 3.75rem);
   display: flex;
   flex-flow: wrap;
-  -moz-column-gap: clamp(1.25rem, -35.096rem + 41.54vw, 14.75rem);
-       column-gap: clamp(1.25rem, -35.096rem + 41.54vw, 14.75rem);
+  -moz-column-gap: clamp(1.25rem, -1.669rem + 14.59vw, 14.75rem);
+       column-gap: clamp(1.25rem, -1.669rem + 14.59vw, 14.75rem);
   row-gap: 40px;
   justify-content: space-between;
 }
 .tabs-content__item {
   position: relative;
-  flex-basis: calc((100% - clamp(1.25rem, -35.096rem + 41.54vw, 14.75rem) * 2) / 3);
+  flex-basis: calc((100% - clamp(1.25rem, -1.669rem + 14.59vw, 14.75rem) * 2) / 3);
   transition-duration: 450ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -819,12 +819,12 @@ button {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
-@media screen and (width <= 1400px) {
+@media screen and (width <= 1830px) {
   .tabs-content {
     justify-content: space-evenly;
   }
 }
-@media screen and (width <= 500px) {
+@media screen and (width <= 530px) {
   .tabs-content__item {
     flex-basis: clamp(18.125rem, 1.236rem + 84.44vw, 27.625rem);
   }
