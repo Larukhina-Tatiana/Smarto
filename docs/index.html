@@ -7,24 +7,24 @@
 
   <title>Smarto Agency&#160;&#8212; Збудовані обʼєкти</title>
   <meta name="description"
-    content="Ознайомтесь з реалізованими житловими, громадськими та спортивними проектами SmartOrange. Якість понад усе." />
+    content="Ознайомтесь з реалізованими житловими, громадськими та спортивними проектами SmartOrange. Якість понад усе.">
   <meta name="keywords"
-    content="будівництво, проекти, житлові комплекси, SmartOrange, архітектура, реконструкція, стадіон, ІТ-школа" />
-  <meta name="author" content="SmartOrange" />
+    content="будівництво, проекти, житлові комплекси, SmartOrange, архітектура, реконструкція, стадіон, ІТ-школа">
+  <meta name="author" content="SmartOrange">
 
   <!-- Open Graph -->
   <!-- Open Graph для соцсетей -->
-  <meta property="og:title" content="Проекти SmartOrange" />
-  <meta property="og:description" content="Реалізовані проекти: житлові, громадські, спортивні. Дізнайтесь більше." />
-  <meta property="og:image" content="/images/og-projects.jpg" />
-  <meta property="og:url" content="https://smartorange.com/projects" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Проекти SmartOrange">
+  <meta property="og:description" content="Реалізовані проекти: житлові, громадські, спортивні. Дізнайтесь більше.">
+  <meta property="og:image" content="/images/og-projects.jpg">
+  <meta property="og:url" content="https://smartorange.com/projects">
+  <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Проекти SmartOrange" />
-  <meta name="twitter:description" content="Ознайомтесь з реалізованими проектами SmartOrange." />
-  <meta name="twitter:image" content="/images/twitter-projects.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Проекти SmartOrange">
+  <meta name="twitter:description" content="Ознайомтесь з реалізованими проектами SmartOrange.">
+  <meta name="twitter:image" content="/images/twitter-projects.jpg">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://smartorange.com/projects">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="./css/style.min.css">
 
   <!-- Preload шрифта -->
-  <link rel="preload" href="./fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- Preconnect for performance -->
 
@@ -115,12 +115,10 @@
 
   <div class="portfolio-sticky-wrapper">
     <!-- Добавляем role="tablist" для списка вкладок для улучшения доступности -->
-    <div class="portfolio-filter tabs" role="tablist">
-      role="presentation&#187;
-      <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
-             aria-selected будет управляться JavaScript'ом. -->
-      <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all" aria-controls="panel-all"
-        aria-selected="true">Усі</button>
+    <ul class="portfolio-filter tabs" role="tablist">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
+        <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all"
+          aria-controls="panel-all" aria-selected="true">Усі</button>
       </li>
       <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="business" role="tab" id="tab-business"
@@ -134,8 +132,11 @@
         <button class="portfolio-filter__btn tabs__btn" data-path="premium" role="tab" id="tab-premium"
           aria-controls="panel-premium" aria-selected="false">Преміум</button>
       </li>
-      </в>
-    </div>
+    </ul>
+    <div role="tabpanel" id="panel-all" aria-labelledby="tab-all"></div>
+    <div role="tabpanel" id="panel-business" aria-labelledby="tab-business" hidden></div>
+    <div role="tabpanel" id="panel-comfort" aria-labelledby="tab-comfort" hidden></div>
+    <div role="tabpanel" id="panel-premium" aria-labelledby="tab-premium" hidden></div>
   </div>
 
   <ul class="portfolio-tabs-content tabs-content"></ul>
@@ -158,7 +159,7 @@
         </div>
         <h2 class="title contacts__title" id="contacts-title">Контакти</h2>
 
-        <address class="contacts__block">
+        <div class="contacts__block">
           <div class="contacts__row">
             <div class="contacts__info">
               <p class="contacts__descr">
@@ -245,9 +246,8 @@
                 rel="noopener noreferrer nofollow">office@smarto.ua</a>
             </div>
           </div>
-        </address>
-      </div>
-      <div class="slogan">
+        </div>
+        <div class="slogan">
   <div class="title slogan__text slogan__text--top">Якість</div>
   <div class="slogan__item slogan__item--top">
     <picture>
@@ -275,13 +275,13 @@
   </div>
   <div class="title slogan__text slogan__text--bottom">понад усе</div>
 </div>
+      </div>
     </div>
-  </div>
   </div>
 </section>
   </main>
 
-  <script src="./js/index.bundle.js"></script>
+  <script src="./js/index.bundle.js" defer></script>
 
   <!-- SVG спрайт -->
 
@@ -334,6 +334,7 @@
       <path fill="currentColor"
         d="M4 .25a.75.75 0 0 0-.75.75v8.095L1.549 7.266A.75.75 0 1 0 .45 8.29l3 3.222.549.59.549-.59 3-3.222A.75.75 0 0 0 6.45 7.266L4.75 9.095V1A.75.75 0 0 0 4 .25" />
     </symbol>
+  </svg>
 </body>
 
 </html>

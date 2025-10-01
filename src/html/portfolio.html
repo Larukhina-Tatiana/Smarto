@@ -3,12 +3,10 @@
 
   <div class="portfolio-sticky-wrapper">
     <!-- Добавляем role="tablist" для списка вкладок для улучшения доступности -->
-    <div class="portfolio-filter tabs" role="tablist">
-      role="presentation"
-      <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
-             aria-selected будет управляться JavaScript'ом. -->
-      <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all" aria-controls="panel-all"
-        aria-selected="true">Усі</button>
+    <ul class="portfolio-filter tabs" role="tablist">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
+        <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all"
+          aria-controls="panel-all" aria-selected="true">Усі</button>
       </li>
       <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="business" role="tab" id="tab-business"
@@ -22,8 +20,11 @@
         <button class="portfolio-filter__btn tabs__btn" data-path="premium" role="tab" id="tab-premium"
           aria-controls="panel-premium" aria-selected="false">Преміум</button>
       </li>
-      </в>
-    </div>
+    </ul>
+    <div role="tabpanel" id="panel-all" aria-labelledby="tab-all"></div>
+    <div role="tabpanel" id="panel-business" aria-labelledby="tab-business" hidden></div>
+    <div role="tabpanel" id="panel-comfort" aria-labelledby="tab-comfort" hidden></div>
+    <div role="tabpanel" id="panel-premium" aria-labelledby="tab-premium" hidden></div>
   </div>
 
   <ul class="portfolio-tabs-content tabs-content"></ul>
