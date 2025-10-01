@@ -52,12 +52,12 @@
     height: clamp(0.875rem, 0.74rem + 0.68vw, 1.5rem);
     box-sizing: content-box;
     top: 53%;
+    @include transition ($transition-property: (background-color, color));
 
     &::after {
       display: none;
     }
 
-    @include transition ($transition-property: (background-color, color));
 
     @media (any-hover: hover) {
       &:hover {
@@ -71,21 +71,17 @@
       outline: none;
       box-shadow: 0 0 5px $accent, 0 0 10px $accent;
     }
+
+    @media screen and (max-width: 500px) {
+      & {
+        top: 20%;
+      }
+    }
   }
 
   .icon {
     fill: currentColor;
   }
-}
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: 52px !important;
-
-}
-
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: 6px !important;
 
 }

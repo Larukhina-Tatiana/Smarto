@@ -338,13 +338,11 @@ button {
   height: clamp(0.875rem, 0.74rem + 0.68vw, 1.5rem);
   box-sizing: content-box;
   top: 53%;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects .swiper-button-prev::after, .projects .swiper-button-next::after {
   display: none;
-}
-.projects .swiper-button-prev, .projects .swiper-button-next {
-  transition-duration: 450ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (any-hover: hover) {
   .projects .swiper-button-prev:hover, .projects .swiper-button-next:hover {
@@ -357,18 +355,13 @@ button {
   outline: none;
   box-shadow: 0 0 5px brown, 0 0 10px brown;
 }
+@media screen and (max-width: 500px) {
+  .projects .swiper-button-prev, .projects .swiper-button-next {
+    top: 20%;
+  }
+}
 .swiper .icon {
   fill: currentColor;
-}
-
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: 52px !important;
-}
-
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: 6px !important;
 }
 
 .decor {
