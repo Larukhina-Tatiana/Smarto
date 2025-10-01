@@ -2,7 +2,8 @@
 @use '../utils/mixins' as *;
 
 .portfolio {
-  padding-block: 113px;
+  padding-top: 113px;
+  padding-bottom: 53px;
   overflow: visible;
 
 
@@ -19,11 +20,11 @@
     font-size: clamp(2.25rem, 2.088rem + 0.81vw, 3rem);
     font-weight: 500;
     letter-spacing: -.04em;
-    margin-bottom: 52px;
+    margin-bottom: 43px;
   }
 
   &-tabs-content {
-    margin-bottom: 92px;
+    margin-bottom: 151px;
   }
 
 

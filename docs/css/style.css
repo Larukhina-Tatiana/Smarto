@@ -337,6 +337,7 @@ button {
   width: clamp(1.25rem, 0.98rem + 1.35vw, 2.5rem);
   height: clamp(0.875rem, 0.74rem + 0.68vw, 1.5rem);
   box-sizing: content-box;
+  top: 53%;
 }
 .projects .swiper-button-prev::after, .projects .swiper-button-next::after {
   display: none;
@@ -358,6 +359,16 @@ button {
 }
 .swiper .icon {
   fill: currentColor;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 52px !important;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 6px !important;
 }
 
 .decor {
@@ -577,7 +588,7 @@ button {
 }
 .slogan__item {
   position: absolute;
-  top: 0;
+  top: 40px;
   width: 680px;
   border-radius: 50%;
   overflow: visible;
@@ -587,12 +598,12 @@ button {
 .slogan__item--top {
   left: 0;
   z-index: 2;
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .slogan__item--bottom {
   right: 0;
   z-index: 1;
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 .slogan__item--active {
   animation: slideIn 0.7s ease-in-out;
@@ -614,12 +625,12 @@ button {
   mix-blend-mode: exclusion;
 }
 .slogan__text--top {
-  top: 7%;
-  left: 9%;
+  top: 14%;
+  left: 10%;
   transform: translateX(-75px);
 }
 .slogan__text--bottom {
-  bottom: 7%;
+  bottom: 0;
   right: 18%;
 }
 @media (max-width: 992px) {
@@ -684,7 +695,8 @@ button {
 }
 
 .portfolio {
-  padding-block: 113px;
+  padding-top: 113px;
+  padding-bottom: 53px;
   overflow: visible;
 }
 .portfolio-sticky-wrapper {
@@ -699,10 +711,10 @@ button {
   font-size: clamp(2.25rem, 2.088rem + 0.81vw, 3rem);
   font-weight: 500;
   letter-spacing: -0.04em;
-  margin-bottom: 52px;
+  margin-bottom: 43px;
 }
 .portfolio-tabs-content {
-  margin-bottom: 92px;
+  margin-bottom: 151px;
 }
 .portfolio__btn-more {
   display: flex;
@@ -734,7 +746,7 @@ button {
   gap: clamp(1.875rem, 1.475rem + 2vw, 3.75rem);
 }
 .tabs-content {
-  padding-top: clamp(1.25rem, 0.717rem + 2.67vw, 3.75rem);
+  padding-top: clamp(1.25rem, 0.331rem + 4.59vw, 5.5rem);
   display: flex;
   flex-flow: wrap;
   -moz-column-gap: clamp(1.25rem, -1.669rem + 14.59vw, 14.75rem);

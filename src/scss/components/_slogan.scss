@@ -10,7 +10,7 @@
 
   &__item {
     position: absolute;
-    top: 0;
+    top: 40px;
     width: 680px;
     border-radius: 50%;
     overflow: visible;
@@ -21,13 +21,13 @@
     &--top {
       left: 0;
       z-index: 2;
-      transform: scale(1.05); // лёгкий zoom
+      transform: scale(1.01); // лёгкий zoom
     }
 
     &--bottom {
       right: 0;
       z-index: 1;
-      transform: scale(0.95); // чуть меньше
+      transform: scale(0.98); // чуть меньше
 
     }
 
@@ -53,13 +53,13 @@
     mix-blend-mode: exclusion;
 
     &--top {
-      top: 7%;
-      left: 9%;
+      top: 14%;
+      left: 10%;
       transform: translateX(-75px);
     }
 
     &--bottom {
-      bottom: 7%;
+      bottom: 0;
       right: 18%;
     }
   }

@@ -51,6 +51,7 @@
     width: clamp(1.25rem, 0.98rem + 1.35vw, 2.5rem);
     height: clamp(0.875rem, 0.74rem + 0.68vw, 1.5rem);
     box-sizing: content-box;
+    top: 53%;
 
     &::after {
       display: none;
@@ -75,4 +76,16 @@
   .icon {
     fill: currentColor;
   }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 52px !important;
+
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 6px !important;
+
 }
