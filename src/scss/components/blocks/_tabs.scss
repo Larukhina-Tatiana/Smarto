@@ -103,13 +103,13 @@
     }
   }
 
-  @media screen and (width <=1830px) {
+  @media screen and (max-width: 1830px) {
     &-content {
       justify-content: space-evenly;
     }
   }
 
-  @media screen and (width <=530px) {
+  @media screen and (max-width: 530px) {
     &-content__item {
       flex-basis: clamp(18.125rem, 1.236rem + 84.44vw, 27.625rem);
     }

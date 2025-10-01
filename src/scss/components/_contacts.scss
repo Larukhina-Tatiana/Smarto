@@ -189,7 +189,7 @@
 
 
 
-  @media screen and (width <=1360px) {
+  @media screen and (max-width: 1360px) {
     &__wrapper {
       flex-direction: column-reverse;
     }
@@ -199,7 +199,7 @@
     }
   }
 
-  @media screen and (width <=475px) {
+  @media screen and (max-width: 475px) {
     &__row {
       max-width: none;
     }

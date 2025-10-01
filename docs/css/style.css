@@ -548,7 +548,7 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (width <= 1360px) {
+@media screen and (max-width: 1360px) {
   .contacts__wrapper {
     flex-direction: column-reverse;
   }
@@ -556,7 +556,7 @@ button {
     max-width: 100%;
   }
 }
-@media screen and (width <= 475px) {
+@media screen and (max-width: 475px) {
   .contacts__row {
     max-width: none;
   }
@@ -819,12 +819,12 @@ button {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
-@media screen and (width <= 1830px) {
+@media screen and (max-width: 1830px) {
   .tabs-content {
     justify-content: space-evenly;
   }
 }
-@media screen and (width <= 530px) {
+@media screen and (max-width: 530px) {
   .tabs-content__item {
     flex-basis: clamp(18.125rem, 1.236rem + 84.44vw, 27.625rem);
   }
@@ -904,7 +904,7 @@ button {
   border-radius: 1000px;
   padding: 4px 8px;
 }
-@media screen and (width <= 500px) {
+@media screen and (max-width: 500px) {
   .project {
     width: 100%;
   }
