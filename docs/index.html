@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="./css/style.min.css">
 
   <!-- Preload шрифта -->
-  <link rel="preload" href="./fonts/InterTight.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="./fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
   <!-- Preconnect for performance -->
 
@@ -55,17 +55,38 @@
   <div class="swiper project__slider" id="project-slider" role="region" aria-label="Проекти компанії">
     <a class="title logo" href="#">Logo company</a>
     <div class="swiper-wrapper">
-      <div class="swiper-slide swiper-slide--bg1">
+      <div class="swiper-slide">
         <div class="container">
           <div class="swiper-slide__content">
             <h2 class="title swiper-slide__title">Test slider</h2>
+            <picture>
+              <source type="image/avif" srcset="
+                      images/slider/img1@1x.avif 1x,
+                      images/slider/img1@2x.avif 2x">
+              <source type="image/webp" srcset="
+                      images/slider/img1@1x.webp 1x,
+                      images/slider/img1@2x.webp 2x">
+              <img class="swiper-slide__img" src="./images/slider/img1@1x.jpg" alt="Опис першого слайда"
+                fetchpriority="high">
+            </picture>
+
           </div>
         </div>
       </div>
-      <div class="swiper-slide swiper-slide--bg2">
+      <div class="swiper-slide">
         <div class="container">
           <div class="swiper-slide__content">
             <h2 class="swiper-slide__title">Owoooooo</h2>
+            <picture>
+              <source type="image/avif" srcset="
+                      images/slider/img2@1x.avif 1x,
+                      images/slider/img2@2x.avif 2x">
+              <source type="image/webp" srcset="
+                      images/slider/img2@1x.webp 1x,
+                      images/slider/img2@2x.webp 2x">
+              <img class="swiper-slide__img" src="./images/slider/img2@1x.jpg" alt="Опис другого слайда" loading="lazy"
+                decoding="async">
+            </picture>
           </div>
         </div>
       </div>
@@ -94,37 +115,37 @@
 
   <div class="portfolio-sticky-wrapper">
     <!-- Добавляем role="tablist" для списка вкладок для улучшения доступности -->
-    <ul class="portfolio-filter tabs" role="tablist">
-      <li class="portfolio-filter__item tabs__item">
-        <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
+    <div class="portfolio-filter tabs" role="tablist">
+      role="presentation&#187;
+      <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
              aria-selected будет управляться JavaScript'ом. -->
-        <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all"
-          aria-controls="panel-all" aria-selected="true">Усі</button>
+      <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all" aria-controls="panel-all"
+        aria-selected="true">Усі</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="business" role="tab" id="tab-business"
           aria-controls="panel-business" aria-selected="false">Бізнес</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="comfort" role="tab" id="tab-comfort"
           aria-controls="panel-comfort" aria-selected="false">Комфорт</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="premium" role="tab" id="tab-premium"
           aria-controls="panel-premium" aria-selected="false">Преміум</button>
       </li>
-    </ul>
-  </div>
-  <!-- Этот ul будет содержать динамически генерируемые панели вкладок.
+      </в>
+    </div>
+    <!-- Этот ul будет содержать динамически генерируемые панели вкладок.
        JavaScript должен будет добавлять role="tabpanel", id, aria-labelledby и hidden. -->
-  <ul class="portfolio-tabs-content tabs-content"></ul>
+    <ul class="portfolio-tabs-content tabs-content"></ul>
 
-  <button class="portfolio__btn-more">
-    Завантажити ще
-    <svg class="icon icon--arrow-down">
-      <use href="#arrow-down"></use>
-    </svg>
-  </button>
+    <button class="portfolio__btn-more">
+      Завантажити ще
+      <svg class="icon icon--arrow-down">
+        <use href="#arrow-down"></use>
+      </svg>
+    </button>
 </section>
     <section class="contacts" aria-labelledby="contacts-title">
   <div class="container">

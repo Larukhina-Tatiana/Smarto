@@ -2,17 +2,38 @@
   <div class="swiper project__slider" id="project-slider" role="region" aria-label="Проекти компанії">
     <a class="title logo" href="#">Logo company</a>
     <div class="swiper-wrapper">
-      <div class="swiper-slide swiper-slide--bg1">
+      <div class="swiper-slide">
         <div class="container">
           <div class="swiper-slide__content">
             <h2 class="title swiper-slide__title">Test slider</h2>
+            <picture>
+              <source type="image/avif" srcset="
+                      images/slider/img1@1x.avif 1x,
+                      images/slider/img1@2x.avif 2x">
+              <source type="image/webp" srcset="
+                      images/slider/img1@1x.webp 1x,
+                      images/slider/img1@2x.webp 2x">
+              <img class="swiper-slide__img" src="images/slider/img1@1x.jpg" alt="Опис першого слайда"
+                fetchpriority="high">
+            </picture>
+
           </div>
         </div>
       </div>
-      <div class="swiper-slide swiper-slide--bg2">
+      <div class="swiper-slide">
         <div class="container">
           <div class="swiper-slide__content">
             <h2 class="swiper-slide__title">Owoooooo</h2>
+            <picture>
+              <source type="image/avif" srcset="
+                      images/slider/img2@1x.avif 1x,
+                      images/slider/img2@2x.avif 2x">
+              <source type="image/webp" srcset="
+                      images/slider/img2@1x.webp 1x,
+                      images/slider/img2@2x.webp 2x">
+              <img class="swiper-slide__img" src="images/slider/img2@1x.jpg" alt="Опис другого слайда" loading="lazy"
+                decoding="async">
+            </picture>
           </div>
         </div>
       </div>

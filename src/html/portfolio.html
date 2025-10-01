@@ -3,36 +3,36 @@
 
   <div class="portfolio-sticky-wrapper">
     <!-- Добавляем role="tablist" для списка вкладок для улучшения доступности -->
-    <ul class="portfolio-filter tabs" role="tablist">
-      <li class="portfolio-filter__item tabs__item">
-        <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
+    <div class="portfolio-filter tabs" role="tablist">
+      role="presentation"
+      <!-- Добавляем role="tab", id и aria-controls для каждой кнопки вкладки.
              aria-selected будет управляться JavaScript'ом. -->
-        <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all"
-          aria-controls="panel-all" aria-selected="true">Усі</button>
+      <button class="portfolio-filter__btn tabs__btn" data-path="all" role="tab" id="tab-all" aria-controls="panel-all"
+        aria-selected="true">Усі</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="business" role="tab" id="tab-business"
           aria-controls="panel-business" aria-selected="false">Бізнес</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="comfort" role="tab" id="tab-comfort"
           aria-controls="panel-comfort" aria-selected="false">Комфорт</button>
       </li>
-      <li class="portfolio-filter__item tabs__item">
+      <li class="portfolio-filter__item tabs__item" role="presentation">
         <button class="portfolio-filter__btn tabs__btn" data-path="premium" role="tab" id="tab-premium"
           aria-controls="panel-premium" aria-selected="false">Преміум</button>
       </li>
-    </ul>
-  </div>
-  <!-- Этот ul будет содержать динамически генерируемые панели вкладок.
+      </в>
+    </div>
+    <!-- Этот ul будет содержать динамически генерируемые панели вкладок.
        JavaScript должен будет добавлять role="tabpanel", id, aria-labelledby и hidden. -->
-  <ul class="portfolio-tabs-content tabs-content"></ul>
+    <ul class="portfolio-tabs-content tabs-content"></ul>
 
 
-  <button class="portfolio__btn-more">
-    Завантажити ще
-    <svg class="icon icon--arrow-down">
-      <use href="#arrow-down"></use>
-    </svg>
-  </button>
+    <button class="portfolio__btn-more">
+      Завантажити ще
+      <svg class="icon icon--arrow-down">
+        <use href="#arrow-down"></use>
+      </svg>
+    </button>
 </section>

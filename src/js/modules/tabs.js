@@ -10,7 +10,6 @@ async function initPortfolioTabs() {
   const contentWrapper = document.querySelector(".tabs-content");
   const portfolioSection = document.querySelector(".portfolio");
   const stickyWrapper = document.querySelector(".portfolio-sticky-wrapper");
-  const allTabPanels = document.querySelectorAll(".tabs-content__item"); // Получаем все панели содержимого
 
   // Проверка на существование основных элементов
   if (!tabsContainer || !allTabButtons.length || !contentWrapper) {
@@ -18,21 +17,27 @@ async function initPortfolioTabs() {
     return;
   }
 
-  // Присваиваем уникальные ID кнопкам и панелям, а также устанавливаем ARIA-атрибуты
-  allTabButtons.forEach((button, index) => {
-    const tabId = `tab-${index}`;
-    const panelId = `panel-${index}`;
+  // Создаем и присваиваем уникальные ID кнопкам и панелям, а также устанавливаем ARIA-атрибуты
+  allTabButtons.forEach((button) => {
+    const path = button.dataset.path; // Получаем data-path из кнопки
+    const tabId = `tab-${path}`; // Формируем ID кнопки на основе data-path
+    const panelId = `panel-${path}`; // Формируем ID панели на основе data-path
 
     button.setAttribute("id", tabId);
     button.setAttribute("aria-controls", panelId); // Связываем кнопку с панелью
 
-    if (allTabPanels[index]) {
-      allTabPanels[index].setAttribute("id", panelId);
-      allTabPanels[index].setAttribute("role", "tabpanel");
-      allTabPanels[index].setAttribute("aria-labelledby", tabId); // Связываем панель с кнопкой
-      allTabPanels[index].setAttribute("hidden", "true"); // Скрываем все панели по умолчанию
-    }
+    // Создаем элемент панели динамически
+    const panel = document.createElement("ul"); // Используем ul, так как в HTML это ul
+    panel.classList.add("tabs-content__item"); // Добавляем класс для стилизации
+    panel.setAttribute("id", panelId);
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("aria-labelledby", tabId); // Связываем панель с кнопкой
+    panel.setAttribute("hidden", "true"); // Скрываем все панели по умолчанию
+
+    contentWrapper.appendChild(panel); // Добавляем панель в contentWrapper
   });
+  // Получаем все созданные панели после их динамического создания
+  const allTabPanels = document.querySelectorAll(".tabs-content__item");
 
   /**
    * Активирует вкладку, обновляет UI и запускает перерисовку проектов.
@@ -41,17 +46,21 @@ async function initPortfolioTabs() {
    */
   function activateTab(path, shouldScroll = true) {
     let targetBtn = null;
-    let targetPanel = null; // Добавляем переменную для целевой панели
+    let targetPanel = null;
 
-    // Оптимизированный поиск кнопки без создания нового массива
-    for (let i = 0; i < allTabButtons.length; i++) {
-      const btn = allTabButtons[i];
+    // Оптимизированный поиск кнопки и панели
+    allTabButtons.forEach((btn) => {
       if (btn.dataset.path === path) {
         targetBtn = btn;
-        targetPanel = allTabPanels[i]; // Находим соответствующую панель
-        break;
       }
-    }
+    });
+
+    allTabPanels.forEach((panel) => {
+      if (panel.id === `panel-${path}`) {
+        // Ищем панель по сформированному ID
+        targetPanel = panel;
+      }
+    });
 
     if (!targetBtn) {
       console.warn(`Вкладка с путем "${path}" не найдена.`);
